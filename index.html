@@ -6,14 +6,14 @@
 <meta name="theme-color" content="#f5efe3"/>
 <title>Mentoria Despertos · Comunidade com Tainá Machado</title>
 <meta name="description" content="Dois meses de encontros semanais ao vivo para reprogramar crenças limitantes, regular o corpo e o sistema nervoso e alinhar corpo, mente e alma. Nova turma em outubro."/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0532c' d='M12 2c.6 5.2 4.8 9.4 10 10-5.2.6-9.4 4.8-10 10-.6-5.2-4.8-9.4-10-10 5.2-.6 9.4-4.8 10-10z'/%3E%3C/svg%3E"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233d6e4d' d='M12 2c.6 5.2 4.8 9.4 10 10-5.2.6-9.4 4.8-10 10-.6-5.2-4.8-9.4-10-10 5.2-.6 9.4-4.8 10-10z'/%3E%3C/svg%3E"/>
 
-<!-- Prévia ao compartilhar o link (WhatsApp, Instagram, etc.)
-     ⚠️ Depois de publicar, troque "SEU-USUARIO" e "SEU-REPO" pela URL real -->
+<!-- Prévia ao compartilhar o link no WhatsApp -->
 <meta property="og:title" content="Mentoria Despertos · Tainá Machado"/>
 <meta property="og:description" content="Saia do automático, quebre padrões e manifeste o seu poder. Dois meses de encontros semanais ao vivo. Nova turma em outubro."/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="https://SEU-USUARIO.github.io/SEU-REPO/fotos/taina-hero.png"/>
+<meta property="og:image" content="https://comunidadedespertos.vercel.app/fotos/taina-hero.png"/>
+<meta property="og:url" content="https://comunidadedespertos.vercel.app/"/>
 <meta property="og:locale" content="pt_BR"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,22 +21,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   /* ==========================================================
-     PALETA — creme / marrom profundo / terracota.
+     PALETA VERDE — folha / floresta / creme.
      Para ajustar tons, troque apenas os hex deste bloco.
   ========================================================== */
   :root{
-    --paper:#f5efe3;        /* fundo principal */
-    --paper-2:#ece2cf;      /* fundo alternado das seções */
-    --ink:#33281a;          /* texto principal */
-    --muted:#7d6c55;        /* texto secundário */
-    --clay:#b0532c;         /* acento terracota */
-    --clay-hi:#cf7143;      /* terracota clara (hover) */
-    --clay-deep:#8a3d1e;    /* terracota escura */
-    --clay-soft:rgba(176,83,44,.35);
-    --line:rgba(70,54,32,.16);
-    --dark:#241b10;         /* seção invertida (investimento/footer) */
-    --cream:#f4eddd;        /* texto sobre o escuro */
-    --on-dark-muted:#b5a688;
+    --paper:#f5efe3;        /* fundo principal (creme, igual ao pôster) */
+    --paper-2:#ebe8da;      /* fundo alternado das seções */
+    --ink:#2c332b;          /* texto principal (verde-carvão) */
+    --muted:#67735f;        /* texto secundário */
+    --clay:#3d6e4d;         /* acento: verde folha */
+    --clay-hi:#4f8562;      /* verde claro (hover) */
+    --clay-deep:#29513a;    /* verde floresta (ênfase) */
+    --clay-soft:rgba(61,110,77,.35);
+    --line:rgba(44,58,49,.16);
+    --dark:#152219;         /* seção invertida: verde quase preto */
+    --cream:#eef1e4;        /* texto sobre o escuro */
+    --on-dark-muted:#a6b8a6;
 
     /* foto dos três livros (recortada em janelas nos cards).
        O script tenta "fotos/livros.png" e, se não existir,
@@ -56,10 +56,10 @@
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  ::selection{background:var(--clay);color:#fbf6ea}
+  ::selection{background:var(--clay);color:#f6f8ef}
   ::-webkit-scrollbar{width:10px}
   ::-webkit-scrollbar-track{background:var(--paper)}
-  ::-webkit-scrollbar-thumb{background:#c9b795;border-radius:8px}
+  ::-webkit-scrollbar-thumb{background:#b6c2a5;border-radius:8px}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   section{scroll-margin-top:80px}
@@ -74,7 +74,7 @@
   .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;opacity:0;transition:opacity .3s}
   .cursor-dot{width:6px;height:6px;background:var(--clay);transform:translate(-50%,-50%)}
   .cursor-ring{width:32px;height:32px;border:1px solid var(--clay-soft);transform:translate(-50%,-50%);transition:width .35s var(--ez),height .35s var(--ez),background .35s,opacity .3s,border-color .35s}
-  .cursor-ring.grow{width:56px;height:56px;background:rgba(176,83,44,.09);border-color:var(--clay)}
+  .cursor-ring.grow{width:56px;height:56px;background:rgba(61,110,77,.09);border-color:var(--clay)}
   body.has-cursor{cursor:none}
   body.has-cursor a,body.has-cursor button,body.has-cursor .book{cursor:none}
   body.has-cursor .cursor-dot,body.has-cursor .cursor-ring{opacity:1}
@@ -100,7 +100,7 @@
     border:1px solid var(--clay-soft);color:var(--clay-deep);
     padding:11px 20px;border-radius:999px;transition:background .3s,color .3s,border-color .3s;
   }
-  .nav-cta:hover{background:var(--clay);color:#fbf6ea;border-color:var(--clay)}
+  .nav-cta:hover{background:var(--clay);color:#f6f8ef;border-color:var(--clay)}
 
   /* ---------- hero ---------- */
   .hero{
@@ -128,7 +128,7 @@
   .hero-photo{position:relative;justify-self:center;width:100%;max-width:430px}
   .hero-photo::before{
     content:'';position:absolute;inset:-44px -34px;pointer-events:none;
-    background:radial-gradient(circle at 62% 28%,rgba(176,83,44,.11),transparent 62%);
+    background:radial-gradient(circle at 62% 28%,rgba(61,110,77,.12),transparent 62%);
   }
   .hp-halo{
     position:absolute;top:-54px;left:-54px;width:168px;height:168px;
@@ -137,15 +137,15 @@
   .hp-frame{
     position:relative;border-radius:999px 999px 26px 26px;overflow:hidden;
     border:1px solid var(--line);background:var(--paper-2);
-    box-shadow:0 30px 60px rgba(70,54,32,.16);
+    box-shadow:0 30px 60px rgba(30,46,38,.16);
   }
-  .hp-frame::after{content:'';position:absolute;inset:0;box-shadow:inset 0 -90px 80px -50px rgba(36,27,16,.32);border-radius:inherit}
+  .hp-frame::after{content:'';position:absolute;inset:0;box-shadow:inset 0 -90px 80px -50px rgba(15,26,20,.3);border-radius:inherit}
   /* se o corte da foto ficar estranho, ajuste o object-position abaixo */
-  .hp-frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 28%;filter:sepia(.14) saturate(.96)}
+  .hp-frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 28%;filter:saturate(1.03)}
   .hp-plate{
     position:absolute;left:-18px;bottom:28px;z-index:2;
     background:var(--paper);border:1px solid var(--clay-soft);border-radius:18px;
-    padding:14px 20px;box-shadow:0 14px 34px rgba(70,54,32,.16);
+    padding:14px 20px;box-shadow:0 14px 34px rgba(30,46,38,.18);
     display:flex;flex-direction:column;gap:4px;
   }
   .hp-plate b{font:400 21px/1 var(--serif);color:var(--ink)}
@@ -155,7 +155,7 @@
     display:flex;align-items:center;gap:8px;
     background:var(--paper);border:1px solid var(--line);border-radius:999px;
     padding:10px 16px;font:600 10px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);box-shadow:0 10px 26px rgba(70,54,32,.13);
+    color:var(--muted);box-shadow:0 10px 26px rgba(30,46,38,.13);
   }
   .hp-chip .ic{width:13px;height:13px;color:var(--clay)}
   @keyframes spin{to{transform:rotate(360deg)}}
@@ -179,7 +179,7 @@
   }
   .btn .ic{width:14px;height:14px;transition:transform .35s var(--ez)}
   .btn:hover .ic{transform:translateX(4px)}
-  .btn-solid{background:var(--clay);color:#fbf6ea}
+  .btn-solid{background:var(--clay);color:#f6f8ef}
   .btn-solid:hover{background:var(--clay-hi);transform:translateY(-2px)}
   .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
   .btn-ghost:hover{border-color:var(--clay);color:var(--clay-deep);transform:translateY(-2px)}
@@ -200,7 +200,7 @@
 
   .hero-corner{
     position:absolute;bottom:36px;font:500 10px/1 var(--sans);
-    letter-spacing:.4em;text-transform:uppercase;color:rgba(125,108,85,.6);
+    letter-spacing:.4em;text-transform:uppercase;color:rgba(103,115,95,.6);
     writing-mode:vertical-rl;
   }
   .hero-corner.left{left:30px;transform:rotate(180deg)}
@@ -222,7 +222,7 @@
   .mq-track{display:flex;width:max-content;animation:mq 44s linear infinite}
   .mq-track span{
     display:flex;align-items:center;gap:34px;padding-right:34px;flex-shrink:0;
-    font:italic 300 clamp(20px,2.6vw,30px)/1 var(--serif);color:rgba(138,61,30,.7);white-space:nowrap;
+    font:italic 300 clamp(20px,2.6vw,30px)/1 var(--serif);color:rgba(41,81,58,.72);white-space:nowrap;
   }
   .mq-track .ic{width:13px;height:13px;color:var(--clay-soft);flex-shrink:0}
   @keyframes mq{to{transform:translateX(-50%)}}
@@ -241,14 +241,7 @@
   .lede{color:var(--muted);font-size:clamp(16px,1.7vw,19px);max-width:660px}
   .lede strong{color:var(--ink);font-weight:500}
 
-  /* ---------- reveals (entrada da hero + scroll) ----------
-     data-rv            → sobe suavemente (padrão)
-     data-rv="left"     → entra deslizando da esquerda
-     data-rv="right"    → entra deslizando da direita
-     data-rv="zoom"     → cresce até o tamanho real
-     data-rv="blur"     → sai de um desfoque sonhado (títulos da hero)
-     --d: atraso para cascata (ex.: style="--d:.2s")
-  ------------------------------------------------------------------ */
+  /* ---------- reveals (entrada da hero + scroll) ---------- */
   [data-rv]{opacity:0;transform:translateY(34px);transition:opacity .95s var(--ez),transform .95s var(--ez);transition-delay:var(--d,0s)}
   [data-rv="left"]{transform:translateX(-44px)}
   [data-rv="right"]{transform:translateX(44px)}
@@ -263,7 +256,7 @@
   .triad-word{
     font:400 clamp(2.6rem,6vw,4.6rem)/1.05 var(--serif);
     text-transform:uppercase;letter-spacing:.06em;
-    color:rgba(51,40,26,.09);transition:color 1.1s ease;
+    color:rgba(30,48,38,.1);transition:color 1.1s ease;
   }
   .triad.on .triad-word{color:var(--clay)}
   .triad .sep{width:20px;height:14px;margin:10px 0;color:var(--clay-soft)}
@@ -308,21 +301,25 @@
   .ta-img{
     border-radius:999px 999px 26px 26px;overflow:hidden;
     border:1px solid var(--line);position:relative;
-    box-shadow:0 26px 54px rgba(70,54,32,.15);
+    box-shadow:0 26px 54px rgba(30,46,38,.15);
   }
   /* se o corte da foto ficar estranho, ajuste o object-position abaixo */
-  .ta-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;filter:sepia(.12) saturate(.95)}
-  .ta-img::after{content:'';position:absolute;inset:0;box-shadow:inset 0 -80px 70px -40px rgba(36,27,16,.35);border-radius:inherit}
+  .ta-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;filter:saturate(1.02)}
+  .ta-img::after{content:'';position:absolute;inset:0;box-shadow:inset 0 -80px 70px -40px rgba(15,26,20,.32);border-radius:inherit}
   .ta-years{
     position:absolute;right:-14px;bottom:-24px;
     background:var(--paper);border:1px solid var(--clay-soft);border-radius:999px;
-    padding:16px 22px;text-align:center;box-shadow:0 10px 30px rgba(70,54,32,.12);
+    padding:16px 22px;text-align:center;box-shadow:0 10px 30px rgba(30,46,38,.12);
   }
   .ta-years b{display:block;font:italic 400 26px/1 var(--serif);color:var(--clay-deep)}
   .ta-years span{font:600 9px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
   .ta-quote{
     font:italic 340 clamp(1.4rem,2.6vw,2rem)/1.4 var(--serif);color:var(--ink);
     border-left:2px solid var(--clay);padding-left:24px;margin:30px 0;
+  }
+  .ta-role{
+    font:600 10.5px/1.6 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);margin:-8px 0 24px;
   }
   .ta-body p{color:var(--muted);margin-bottom:18px}
   .ta-body p strong{color:var(--ink);font-weight:500}
@@ -335,23 +332,23 @@
     border:1px solid var(--line);border-radius:999px;padding:9px 16px;background:rgba(255,253,246,.5);
   }
   .tl{position:relative;margin-top:clamp(50px,6vw,80px);padding-left:58px;max-width:780px}
-  .tl-track{position:absolute;left:17px;top:8px;bottom:8px;width:2px;background:rgba(70,54,32,.12);border-radius:2px}
+  .tl-track{position:absolute;left:17px;top:8px;bottom:8px;width:2px;background:rgba(44,58,49,.12);border-radius:2px}
   .tl-fill{position:absolute;left:0;top:0;width:100%;height:0;background:var(--clay);border-radius:2px}
   .tl-head{
     position:absolute;left:50%;bottom:-4px;width:9px;height:9px;border-radius:50%;
     background:var(--clay-hi);transform:translateX(-50%);
-    box-shadow:0 0 14px 3px rgba(176,83,44,.4);
+    box-shadow:0 0 14px 3px rgba(61,110,77,.4);
   }
   .step{position:relative;padding-bottom:clamp(44px,5vw,64px)}
   .step:last-child{padding-bottom:0}
   .node{
     position:absolute;left:-58px;top:0;width:36px;height:36px;border-radius:50%;
-    background:var(--paper);border:1px solid rgba(70,54,32,.22);
+    background:var(--paper);border:1px solid rgba(44,58,49,.24);
     display:flex;align-items:center;justify-content:center;
     font:600 11px/1 var(--sans);color:var(--muted);
     transition:border-color .5s,color .5s,box-shadow .5s,background .5s;
   }
-  .step.lit .node{border-color:var(--clay);color:var(--clay-deep);background:#faf3e4;box-shadow:0 0 0 5px rgba(176,83,44,.08)}
+  .step.lit .node{border-color:var(--clay);color:var(--clay-deep);background:#edf2ea;box-shadow:0 0 0 5px rgba(61,110,77,.1)}
   .step h3{font:400 clamp(1.35rem,2.6vw,1.9rem)/1.2 var(--serif);transition:color .5s}
   .step.lit h3{color:var(--clay-deep)}
   .step p{color:var(--muted);max-width:560px;margin-top:10px;font-size:15.5px}
@@ -361,8 +358,6 @@
        card 1 → 0%   (terço esquerdo  = O Caibalion)
        card 2 → 50%  (terço do meio   = Quebrando o Hábito)
        card 3 → 100% (terço direito   = Como Se Tornar Sobrenatural)
-     Ajuste fino: no background-position, o 1º valor desloca na
-     horizontal (0%–100%) e o 2º na vertical (ex.: 45%).
   ------------------------------------------------------------------ */
   .books{display:flex;gap:14px;height:540px}
   .book{
@@ -371,7 +366,7 @@
     padding:26px;display:flex;flex-direction:column;
     transition:flex .8s var(--ez),border-color .5s,box-shadow .5s,opacity .95s var(--ez) var(--d,0s),transform .95s var(--ez) var(--d,0s);
   }
-  .book.active{flex:2.7;border-color:var(--clay-soft);box-shadow:0 18px 44px rgba(70,54,32,.1)}
+  .book.active{flex:2.7;border-color:var(--clay-soft);box-shadow:0 18px 44px rgba(30,46,38,.1)}
   .book::before{
     content:'';position:absolute;top:0;left:0;height:2px;width:0;background:var(--clay);
     transition:width .8s var(--ez);
@@ -389,7 +384,7 @@
   }
   .book:nth-child(2) .book-img{background-position:50% 50%}
   .book:nth-child(3) .book-img{background-position:100% 50%}
-  .book-img::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 -46px 38px -26px rgba(36,27,16,.3)}
+  .book-img::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 -46px 38px -26px rgba(15,26,20,.3)}
   .book-img.noimg{display:none}
   .book-num{font:italic 300 15px/1 var(--serif);color:var(--clay);margin-bottom:16px}
   .book h3{font:400 clamp(1.2rem,2vw,1.7rem)/1.25 var(--serif);transition:color .4s}
@@ -413,17 +408,17 @@
   .check-item:first-child{border-top:1px solid var(--line)}
   .check-ic{
     width:26px;height:26px;border-radius:50%;flex-shrink:0;margin-top:2px;
-    border:1px solid rgba(70,54,32,.25);display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(44,58,49,.26);display:flex;align-items:center;justify-content:center;
     color:var(--clay);background:var(--paper);transition:background .5s,border-color .5s,color .5s;
   }
   .check-ic .ic{width:12px;height:12px;opacity:0;transform:scale(.4);transition:opacity .4s,transform .4s var(--ez)}
-  .check-item.on .check-ic{background:var(--clay);border-color:var(--clay);color:#fbf6ea}
+  .check-item.on .check-ic{background:var(--clay);border-color:var(--clay);color:#f6f8ef}
   .check-item.on .check-ic .ic{opacity:1;transform:scale(1)}
   .check-item b{display:block;font:500 17px/1.4 var(--sans);color:var(--ink)}
   .check-item span{font-size:14px;color:var(--muted)}
   .bonus{
     border:1px solid var(--clay-soft);border-radius:22px;padding:34px;
-    background:linear-gradient(0deg,rgba(176,83,44,.05),rgba(176,83,44,.05)),rgba(255,253,246,.5);
+    background:linear-gradient(0deg,rgba(61,110,77,.05),rgba(61,110,77,.05)),rgba(255,253,246,.5);
   }
   .bonus-label{
     display:inline-flex;align-items:center;gap:10px;
@@ -441,7 +436,7 @@
   .day-line{position:absolute;top:36px;left:0;right:0;height:1px;background:var(--line)}
   .day-dot{
     position:absolute;top:32.5px;left:0;width:9px;height:9px;border-radius:50%;
-    background:var(--clay);box-shadow:0 0 12px 3px rgba(176,83,44,.3);
+    background:var(--clay);box-shadow:0 0 12px 3px rgba(61,110,77,.3);
     animation:travel 14s ease-in-out infinite;
   }
   @keyframes travel{0%{left:2%}50%{left:96%}100%{left:2%}}
@@ -467,18 +462,18 @@
   .breath-stage{position:relative;width:320px;height:320px;margin:clamp(40px,5vw,60px) 0 34px;display:flex;align-items:center;justify-content:center}
   .breath-ripples{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
   .breath-ripples span{
-    position:absolute;border:1px solid rgba(176,83,44,.22);border-radius:50%;
+    position:absolute;border:1px solid rgba(61,110,77,.24);border-radius:50%;
     width:190px;height:190px;animation:ripple 7s ease-out infinite;
   }
   .breath-ripples span:nth-child(2){animation-delay:2.3s}
   .breath-ripples span:nth-child(3){animation-delay:4.6s}
   @keyframes ripple{0%{transform:scale(.7);opacity:0}25%{opacity:.8}100%{transform:scale(1.5);opacity:0}}
   .breath-ring{position:absolute;inset:0;transform:rotate(-90deg)}
-  .breath-ring .bgc{stroke:rgba(70,54,32,.14)}
+  .breath-ring .bgc{stroke:rgba(44,58,49,.15)}
   .breath-ring .fgc{stroke:var(--clay);stroke-linecap:round}
   .breath-orb{
     position:relative;width:172px;height:172px;border-radius:50%;
-    background:radial-gradient(circle at 38% 32%,rgba(207,113,67,.4),rgba(176,83,44,.1) 62%,transparent 75%);
+    background:radial-gradient(circle at 38% 32%,rgba(124,171,139,.45),rgba(61,110,77,.12) 62%,transparent 75%);
     border:1px solid var(--clay-soft);
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
     transform:scale(.62);
@@ -488,33 +483,80 @@
   .breath-cycles{font:600 10px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:26px;min-height:10px}
   .breath-cycles b{color:var(--clay-deep)}
 
-  /* ---------- 08 investimento ---------- */
+  /* ---------- depoimentos (carrossel horizontal em loop) ---------- */
+  .testi-sec{position:relative;overflow:hidden}
+  .testi-sec .lede{text-align:center;margin:0 auto}
+  .testi-view{
+    position:relative;margin-top:clamp(44px,5vw,64px);
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  }
+  .testi-track{display:flex;gap:20px;width:max-content;padding:8px 0 14px;animation:testiLoop 75s linear infinite}
+  .testi-track:hover{animation-play-state:paused}
+  @keyframes testiLoop{to{transform:translateX(calc(-50% - 10px))}}
+  .testi-group{display:flex;gap:20px;align-items:flex-start}
+  .testi-card{
+    width:min(370px,82vw);flex-shrink:0;
+    border:1px solid var(--line);border-radius:20px;
+    background:rgba(255,253,246,.72);
+    padding:28px 28px 24px;
+    display:flex;flex-direction:column;gap:18px;
+    transition:border-color .4s,box-shadow .4s,transform .4s var(--ez);
+  }
+  .testi-card:hover{border-color:var(--clay-soft);box-shadow:0 18px 40px rgba(30,46,38,.1);transform:translateY(-4px)}
+  .testi-txt{
+    font:italic 340 clamp(.98rem,1.3vw,1.08rem)/1.6 var(--serif);
+    color:var(--ink);
+  }
+  .testi-txt::before{
+    content:'“';display:block;
+    font:400 44px/0.6 var(--serif);color:var(--clay);
+    margin-bottom:10px;
+  }
+  .testi-who{
+    display:flex;align-items:center;gap:12px;
+    padding-top:14px;border-top:1px solid var(--line);
+  }
+  .testi-ava{
+    width:40px;height:40px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    font:400 14px/1 var(--serif);color:#f6f8ef;background:var(--clay);
+  }
+  .testi-who b{display:block;font:500 14.5px/1.35 var(--sans);color:var(--ink)}
+  .testi-who small{font:600 9.5px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block}
+  .testi-note{
+    margin-top:26px;text-align:center;
+    font:600 10px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
+  }
+
+  /* ---------- 08 investimento (invertida, verde profundo) ---------- */
   .invest{background:var(--dark);color:var(--cream)}
-  .invest .label{color:#d98b5f}
-  .invest .label::before{background:rgba(217,139,95,.45)}
+  .invest .label{color:#a3c9ab}
+  .invest .label::before{background:rgba(163,201,171,.45)}
   .invest h2{color:var(--cream)}
-  .invest h2 em{color:#d98b5f}
+  .invest h2 em{color:#a3c9ab}
   .invest-lede{color:var(--on-dark-muted);max-width:640px}
   .anchor-price{
     display:inline-block;margin-top:26px;
-    font:400 clamp(1.3rem,2.4vw,1.8rem)/1 var(--serif);color:#8d7d63;
-    text-decoration:line-through;text-decoration-color:rgba(217,139,95,.6);text-decoration-thickness:2px;
+    font:400 clamp(1.3rem,2.4vw,1.8rem)/1 var(--serif);color:#7f9280;
+    text-decoration:line-through;text-decoration-color:rgba(163,201,171,.55);text-decoration-thickness:2px;
   }
   .price-row{display:flex;align-items:center;gap:clamp(24px,4vw,50px);margin:clamp(36px,5vw,56px) 0;flex-wrap:wrap}
   .price{display:flex;align-items:baseline;gap:10px}
-  .price .cur{font:italic 400 clamp(1.6rem,3vw,2.4rem)/1 var(--serif);color:#d98b5f}
+  .price .cur{font:italic 400 clamp(1.6rem,3vw,2.4rem)/1 var(--serif);color:#a3c9ab}
   .price .val{font:560 clamp(4.6rem,11vw,8.4rem)/1 var(--serif);letter-spacing:-.02em;color:var(--cream)}
   .price-cond{font:500 15px/1.6 var(--sans);color:var(--on-dark-muted);max-width:220px}
-  .price-cond b{color:#d98b5f}
-  .seal{width:128px;height:128px;color:#d98b5f;animation:spin 26s linear infinite;flex-shrink:0}
-  .seal text{font:600 11px var(--sans);letter-spacing:2.2px;fill:#d98b5f}
+  .price-cond b{color:#a3c9ab}
+  .seal{width:128px;height:128px;color:#a3c9ab;animation:spin 26s linear infinite;flex-shrink:0}
+  .seal text{font:600 11px var(--sans);letter-spacing:2.2px;fill:#a3c9ab}
   .invest-note{font:italic 400 clamp(1.1rem,2vw,1.4rem)/1.6 var(--serif);color:var(--on-dark-muted);max-width:600px}
   .invest-cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:40px}
   .btn-dark{background:var(--cream);color:var(--dark)}
-  .btn-dark:hover{background:#fffaf0;transform:translateY(-2px)}
+  .btn-dark:hover{background:#f7faed;transform:translateY(-2px)}
   .btn-dark .ic{width:16px;height:16px}
-  .btn-line{background:transparent;border:1px solid rgba(244,237,221,.28);color:var(--cream)}
-  .btn-line:hover{border-color:#d98b5f;color:#d98b5f;transform:translateY(-2px)}
+  .btn-line{background:transparent;border:1px solid rgba(238,241,228,.28);color:var(--cream)}
+  .btn-line:hover{border-color:#a3c9ab;color:#a3c9ab;transform:translateY(-2px)}
 
   /* ---------- manifesto ---------- */
   .manifesto{position:relative;z-index:1;text-align:center}
@@ -530,18 +572,18 @@
   .mf-quote b{color:var(--clay-deep);font-weight:400}
 
   /* ---------- footer ---------- */
-  footer{background:var(--dark);border-top:1px solid rgba(244,237,221,.12);position:relative;z-index:1}
+  footer{background:var(--dark);border-top:1px solid rgba(238,241,228,.12);position:relative;z-index:1}
   .ft{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:44px 0;flex-wrap:wrap}
   .ft-brand{display:flex;flex-direction:column;gap:10px}
   .ft-brand .brand{color:var(--cream)}
-  .ft-brand .brand .ic{color:#d98b5f}
+  .ft-brand .brand .ic{color:#a3c9ab}
   .ft-tag{font:italic 400 15px/1.4 var(--serif);color:var(--on-dark-muted)}
   .ft-nav{display:flex;gap:26px;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-muted)}
-  .ft-nav a:hover{color:#d98b5f}
-  .ft-cta{font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(244,237,221,.28);border-radius:999px;padding:12px 22px;display:inline-flex;gap:9px;align-items:center;transition:background .3s,color .3s,border-color .3s}
-  .ft-cta:hover{background:var(--clay);border-color:var(--clay);color:#fbf6ea}
+  .ft-nav a:hover{color:#a3c9ab}
+  .ft-cta{font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(238,241,228,.28);border-radius:999px;padding:12px 22px;display:inline-flex;gap:9px;align-items:center;transition:background .3s,color .3s,border-color .3s}
+  .ft-cta:hover{background:var(--clay);border-color:var(--clay);color:#f6f8ef}
   .ft-cta .ic{width:14px;height:14px}
-  .ft-bottom{border-top:1px solid rgba(244,237,221,.1);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font:400 12px/1.5 var(--sans);color:#8d7d63}
+  .ft-bottom{border-top:1px solid rgba(238,241,228,.1);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font:400 12px/1.5 var(--sans);color:#7f9280}
 
   /* ---------- notificações de compra (prova social) ---------- */
   .ps-toast{
@@ -549,7 +591,7 @@
     display:flex;align-items:center;gap:12px;
     width:max-content;max-width:330px;
     background:var(--paper);border:1px solid var(--clay-soft);border-radius:16px;
-    padding:12px 34px 12px 13px;box-shadow:0 18px 40px rgba(36,27,16,.24);
+    padding:12px 34px 12px 13px;box-shadow:0 18px 40px rgba(15,26,20,.24);
     opacity:0;transform:translateY(140%);visibility:hidden;
     transition:transform .65s var(--ez),opacity .5s ease,visibility 0s linear .65s;
   }
@@ -557,13 +599,13 @@
   .ps-ava{
     width:42px;height:42px;border-radius:50%;flex-shrink:0;
     display:flex;align-items:center;justify-content:center;
-    font:400 15px/1 var(--serif);color:#fbf6ea;background:var(--clay);
+    font:400 15px/1 var(--serif);color:#f6f8ef;background:var(--clay);
     position:relative;
   }
   .ps-badge{
     position:absolute;right:-3px;bottom:-3px;width:16px;height:16px;border-radius:50%;
     background:var(--clay);border:2px solid var(--paper);
-    display:flex;align-items:center;justify-content:center;color:#fbf6ea;
+    display:flex;align-items:center;justify-content:center;color:#f6f8ef;
   }
   .ps-badge .ic{width:8px;height:8px}
   .ps-txt{display:flex;flex-direction:column;gap:1px;min-width:0}
@@ -661,6 +703,7 @@
     <a href="#mentoria">A mentoria</a>
     <a href="#para-quem">Para quem é</a>
     <a href="#jornada">A jornada</a>
+    <a href="#depoimentos">Depoimentos</a>
     <a href="#investimento">Investimento</a>
   </div>
   <a class="nav-cta js-wa" href="#">Quero participar</a>
@@ -672,12 +715,12 @@
     <div class="hero-copy">
       <div class="orb" data-rv="zoom" aria-hidden="true">
         <svg viewBox="0 0 120 120">
-          <circle class="core" cx="60" cy="60" r="15" fill="#c96b3f"/>
-          <circle cx="60" cy="60" r="27" fill="none" stroke="rgba(138,61,30,.4)" stroke-width="1"/>
-          <circle class="spin" cx="60" cy="60" r="41" fill="none" stroke="rgba(138,61,30,.55)" stroke-width="1" stroke-dasharray="2 7"/>
-          <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(138,61,30,.18)" stroke-width="1"/>
-          <circle cx="60" cy="5" r="2" fill="#b0532c"/>
-          <circle cx="115" cy="60" r="1.6" fill="#b0532c"/>
+          <circle class="core" cx="60" cy="60" r="15" fill="#7cab8b"/>
+          <circle cx="60" cy="60" r="27" fill="none" stroke="rgba(41,81,58,.4)" stroke-width="1"/>
+          <circle class="spin" cx="60" cy="60" r="41" fill="none" stroke="rgba(41,81,58,.55)" stroke-width="1" stroke-dasharray="2 7"/>
+          <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(41,81,58,.18)" stroke-width="1"/>
+          <circle cx="60" cy="5" r="2" fill="#3d6e4d"/>
+          <circle cx="115" cy="60" r="1.6" fill="#3d6e4d"/>
         </svg>
       </div>
       <p class="eyebrow" data-rv style="--d:.08s">Comunidade Despertos · Mentoria com Tainá Machado</p>
@@ -709,7 +752,7 @@
     <div class="hero-photo" data-rv="right" style="--d:.3s">
       <svg class="hp-halo" viewBox="0 0 170 170" aria-hidden="true">
         <circle cx="85" cy="85" r="80" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 9"/>
-        <circle cx="85" cy="5" r="3.5" fill="#b0532c"/>
+        <circle cx="85" cy="5" r="3.5" fill="#3d6e4d"/>
       </svg>
       <div class="hp-frame">
         <img src="fotos/taina-hero.png" alt="Tainá Machado, condutora da Mentoria Despertos" fetchpriority="high">
@@ -806,7 +849,7 @@
       <div class="ta-photo" data-rv="left">
         <svg class="ta-ring" viewBox="0 0 150 150" aria-hidden="true">
           <circle cx="75" cy="75" r="70" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 8"/>
-          <circle cx="75" cy="5" r="3" fill="#b0532c"/>
+          <circle cx="75" cy="5" r="3" fill="#3d6e4d"/>
         </svg>
         <div class="ta-img">
           <!-- FOTO COM O MICROFONE — usa fotos/taina-microfone.png; sem a pasta, o espelho online entra sozinho -->
@@ -817,6 +860,7 @@
       <div class="ta-body">
         <p class="label" data-rv>03 · Sua condutora</p>
         <h2 data-rv style="--d:.08s">Oi! Eu sou<br>a <em>Tainá</em></h2>
+        <p class="ta-role" data-rv style="--d:.12s">Terapeuta integrativa · mentora em expansão de consciência</p>
         <div class="ta-quote" data-rv style="--d:.16s">
           “Ao reprogramar a sua identidade, você transforma a sua realidade.”
         </div>
@@ -956,14 +1000,10 @@
       <aside class="bonus" data-rv="right" style="--d:.2s">
         <span class="bonus-label"><svg class="ic" style="width:12px;height:12px"><use href="#i-spark"/></svg> Bônus de turma</span>
         <div class="bonus-item">
-          <b>Protocolo de alimentação equilibrada</b>
-          <span>para regular o corpo de dentro para fora</span>
+          <b>Apostila completa da jornada</b>
+          <span>conteúdo aprofundado, práticas guiadas e exercícios de integração — para acompanhar cada encontro e registrar a sua transformação ao longo dos 60 dias.</span>
         </div>
-        <div class="bonus-item">
-          <b>Guia de cuidados energéticos</b>
-          <span>proteção e higiene da sua energia no dia a dia</span>
-        </div>
-        <p class="bonus-note">“Nossa forma de garantir que toda energia ancorada nos encontros permanecerá durante a semana.”</p>
+        <p class="bonus-note">“Tudo o que trabalharmos juntos, organizado em um material de apoio para você revisar e praticar sempre que quiser.”</p>
       </aside>
     </div>
   </div>
@@ -1032,6 +1072,100 @@
   </div>
 </section>
 
+<!-- ===================== DEPOIMENTOS (carrossel horizontal em loop) ===================== -->
+<section class="sec solid-alt above-sky testi-sec" id="depoimentos">
+  <div class="wrap">
+    <p class="label" data-rv style="justify-content:center">O que dizem</p>
+    <h2 data-rv style="--d:.08s;text-align:center">Vozes de quem já<br><em>despertou</em></h2>
+    <p class="lede" data-rv style="--d:.16s">
+      Histórias reais de quem atravessou essa jornada com a Tainá —
+      passe o mouse sobre os cards para pausar e ler com calma.
+    </p>
+  </div>
+  <div class="testi-view" data-rv style="--d:.2s">
+    <div class="testi-track">
+      <div class="testi-group">
+
+        <article class="testi-card">
+          <p class="testi-txt">Escrever este depoimento é uma forma de honrar o meu processo e expressar a minha mais profunda gratidão ao trabalho da Tainá. Antes de iniciar a terapia, eu vivia um cenário de extrema dor e exaustão emocional: crenças limitantes, crises existenciais, ansiedade constante, transtorno de pânico e um medo paralisante de morrer. Os sintomas depressivos tiravam qualquer brilho dos meus dias, enquanto os traumas antigos pareciam feridas abertas que eu não conseguia curar. Era um estado de sobrevivência, não de vida. Encontrar a Tainá foi o início de uma grande mudança: com uma sensibilidade única, acolhimento e absoluto profissionalismo, ela criou um espaço seguro onde pude olhar para as minhas maiores vulnerabilidades sem o peso do julgamento. Hoje, o “depois” é feito de ressignificação e alívio. Embora os desafios da vida continuem existindo, a ansiedade e o pânico perderam o controle sobre mim.</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Christian Garcia Bocha"></span>
+            <div><b>Christian Garcia Bocha</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">Uma pessoa e terapeuta incrível, com quem fomos traçando nossos caminhos juntos. Ela foi me guiando para curar muitas crenças que não me permitiam avançar, me ajudando a enxergar a vida com outros olhos. E, olhando para trás, desde que comecei há quase 5 anos, tudo o que mudou na minha vida só me faz agradecer.</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Rodrigo D'Avila Araujo"></span>
+            <div><b>Rodrigo D’Avila Araujo</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">A Tainá é uma excelente profissional, com uma energia surreal. Foi muito bom encontrá-la: me senti acolhida e ouvida sem julgamentos desde a primeira sessão. A partir de então, percebi mudanças importantes na minha forma de enxergar o mundo e de lidar melhor com algumas situações da minha vida. Eu sempre recomendo muito ela para todo mundo que eu conheço, porque sei que não irão se arrepender.</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Fladiane Teixeira"></span>
+            <div><b>Fladiane Teixeira</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">As terapias com a Tainá nos abrem para uma nova visão sobre a vida, nos trazem novas perspectivas de esperança e mecanismos para lidarmos com nossos bloqueios. Temos a análise, mas também muitas práticas, muita mão na massa para aplicar concretamente. Tem sido uma experiência completamente diferente, em um ótimo sentido! É um tratamento nada convencional e tudo o que eu precisava!!! ✨😍🍀🙏</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Marine Moraes"></span>
+            <div><b>Marine Moraes</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">A Tainá é uma ótima profissional. As terapias com ela sempre são leves e direcionadas para as nossas feridas: geralmente a gente traz a ferida pra ela, e ela nos ensina a fechar e curar. Uma pessoa que, sem dúvida, eu já devo ter conhecido em vidas passadas. Eu defino a Tainá como resgate — ela literalmente me resgatou em um momento muito difícil e pesado, e me mostrou que eu precisava curar coisas que eu achava e julgava curadas. Só gratidão e muito respeito pelo trabalho dela. Sucesso sempre!! 😍</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Camila Fuchs Igansi"></span>
+            <div><b>Camila Fuchs Igansi</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">Conheci a Tainá em 2019, quando procurei uma forma de me resgatar. Estava perdida em mim, vivendo diversos acontecimentos com os quais eu não sabia lidar, nem mesmo entender o que estava acontecendo. Eu não me via mais, eu não sabia quem eu era. Tinha me perdido dentro de mim mesma. Ela fez eu me reencontrar e, com isso, descobrir o mundo aí fora que me aguardava e o quanto eu tinha pra conquistar. E hoje estou aqui, vivendo muito mais do que planejamos ou sequer sonhamos. Tainá é um ser de luz inigualável.</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Claudia Gonçalves"></span>
+            <div><b>Claudia Gonçalves</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">Simplesmente a melhor pessoa que já apareceu na minha vida!! Me ajudou a mudar totalmente a minha vida, a quebrar padrões e ciclos que eu vivia há anos e achava que era normal. Me fez evoluir espiritualmente e como pessoa, a ver a vida por outro ângulo e a entender coisas que pareciam impossíveis. Costumo dizer que todo mundo precisa da Tainá na vida...</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Vithoria Pesce"></span>
+            <div><b>Vithoria Pesce</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">Cada sessão é uma experiência incrível. Ainda tenho muito caminho pela frente, mas tudo o que ela tem me ajudado a enxergar através da terapia tem me permitido ver as coisas de outra forma e só me faz sentir gratidão. Recomendo muito o seu trabalho e a sua terapia. Sou extremamente grata por todo o apoio, acolhimento e aprendizado ao longo desse processo.</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Belen Machado"></span>
+            <div><b>Belen Machado</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-txt">Profissional excelente! A Tainá transformou minha vida e tudo o que eu sabia ou tinha experienciado em terapias. Me ajudou com meu desenvolvimento pessoal, quebra de crenças e repetição de padrões, entre tantas outras coisas. Indico de olhos fechados!</p>
+          <div class="testi-who">
+            <span class="testi-ava" data-name="Isabelle Ferreira"></span>
+            <div><b>Isabelle Ferreira</b><small>jornada com a Tainá</small></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="testi-note" data-rv>depoimentos reais · Comunidade Despertos</p>
+  </div>
+</section>
+
 <!-- ===================== 08 INVESTIMENTO ===================== -->
 <section class="sec invest above-sky" id="investimento">
   <div class="wrap">
@@ -1070,7 +1204,7 @@
 <!-- ===================== MANIFESTO FINAL ===================== -->
 <section class="sec manifesto above-sky" id="manifesto">
   <div class="wrap">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="#b0532c" aria-hidden="true" data-rv><use href="#i-spark" width="26" height="26"/></svg>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#3d6e4d" aria-hidden="true" data-rv><use href="#i-spark" width="26" height="26"/></svg>
     <h2 class="mf-title" style="margin-top:26px" data-rv>
       Se a primeira turma foi <em>espiritual</em>,<br>a segunda será <em>quântica.</em>
     </h2>
@@ -1100,6 +1234,7 @@
       <div class="ft-nav">
         <a href="#mentoria">A mentoria</a>
         <a href="#jornada">A jornada</a>
+        <a href="#depoimentos">Depoimentos</a>
         <a href="#investimento">Investimento</a>
       </div>
       <a class="ft-cta js-wa" href="#"><svg class="ic"><use href="#i-chat"/></svg> Fale conosco</a>
@@ -1151,8 +1286,8 @@
   ============================================================ */
   const IMG_PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
     '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000">' +
-    '<rect width="100%" height="100%" fill="#ece2cf"/>' +
-    '<text x="50%" y="50%" font-family="Georgia,serif" font-size="34" fill="#7d6c55" text-anchor="middle">imagem</text>' +
+    '<rect width="100%" height="100%" fill="#ebe8da"/>' +
+    '<text x="50%" y="50%" font-family="Georgia,serif" font-size="34" fill="#67735f" text-anchor="middle">imagem</text>' +
     '</svg>'
   );
   const IMG_MIRROR = {
@@ -1188,7 +1323,7 @@
     local.src = LOCAL;
   })();
 
-  /* ---------- céu estrelado interativo ---------- */
+  /* ---------- céu estrelado interativo (tinta verde sobre papel) ---------- */
   const canvas = document.getElementById('sky');
   const ctx = canvas.getContext('2d');
   let W = 0, H = 0, DPR = 1, stars = [], shooters = [], nextShoot = 2500;
@@ -1231,13 +1366,13 @@
         oy = -(dy / (d || 1)) * f * 7 * s.layer;
       }
       ctx.fillStyle = s.warm
-        ? `rgba(176,83,44,${Math.min(1, a + .18)})`
-        : `rgba(70,54,32,${a})`;
+        ? `rgba(61,110,77,${Math.min(1, a + .18)})`
+        : `rgba(35,54,43,${a})`;
       ctx.beginPath();
       ctx.arc(px + ox, py + oy, rg, 0, Math.PI * 2);
       ctx.fill();
       if(s.r > 1.5){
-        ctx.strokeStyle = `rgba(70,54,32,${a * .35})`;
+        ctx.strokeStyle = `rgba(35,54,43,${a * .35})`;
         ctx.lineWidth = .7;
         const L = s.r * 5;
         ctx.beginPath();
@@ -1253,8 +1388,8 @@
       const a = Math.sin(sh.life * Math.PI) * .7;
       const tail = 130;
       const g = ctx.createLinearGradient(sh.x, sh.y, sh.x - sh.vx / 9 * tail, sh.y - sh.vy / 9 * tail);
-      g.addColorStop(0, `rgba(176,83,44,${a})`);
-      g.addColorStop(1, 'rgba(176,83,44,0)');
+      g.addColorStop(0, `rgba(61,110,77,${a})`);
+      g.addColorStop(1, 'rgba(61,110,77,0)');
       ctx.strokeStyle = g; ctx.lineWidth = 1.4;
       ctx.beginPath();
       ctx.moveTo(sh.x, sh.y);
@@ -1308,6 +1443,17 @@
   /* ---------- marquee ---------- */
   const mq = document.getElementById('mq');
   mq.appendChild(mq.firstElementChild.cloneNode(true));
+
+  /* ---------- depoimentos: avatares + duplicação para o loop infinito ---------- */
+  const TESTI_COLORS = ['#3d6e4d','#29513a','#5a8266','#7b9464'];
+  document.querySelectorAll('.testi-ava').forEach((el, i) => {
+    const n = (el.dataset.name || '').split(' ').filter(Boolean).slice(0, 2)
+              .map(w => w.charAt(0)).join('').toUpperCase();
+    el.textContent = n;
+    el.style.background = TESTI_COLORS[i % TESTI_COLORS.length];
+  });
+  const tGroup = document.querySelector('.testi-group');
+  if(tGroup) tGroup.parentElement.appendChild(tGroup.cloneNode(true));
 
   /* ---------- reveals (hero ao carregar + resto ao scrollar) ---------- */
   const rvIO = new IntersectionObserver(entries => {
@@ -1483,7 +1629,7 @@
   const PS_NAMES = ['Ana Paula','Carlos Eduardo','Juliana','Marcos Vinícius','Fernanda','Rafael','Camila','Bruno','Larissa','Thiago','Patrícia','Diego','Mariana','Felipe','Aline','Gabriel','Vanessa','André','Beatriz','Lucas','Renata','Eduardo','Priscila','Rodrigo','Tatiane','Vitor','Michele','Leonardo','Carla','Gustavo','Débora','Henrique','Simone','Ricardo','Cristiane','Fábio'];
   const PS_CITIES = ['São Paulo','Rio de Janeiro','Belo Horizonte','Curitiba','Porto Alegre','Salvador','Fortaleza','Recife','Goiânia','Florianópolis','Campinas','Manaus','Vitória','Natal','João Pessoa','Ribeirão Preto','Santos','Blumenau','Belém','Brasília'];
   const PS_MSGS = ['garantiu a vaga na mentoria','acabou de se inscrever','entrou na Comunidade Despertos','garantiu sua vaga na 2ª turma','entrou para a turma de outubro','acabou de garantir o acesso'];
-  const PS_COLORS = ['#b0532c','#8a3d1e','#6b5b3f','#9c5a24'];
+  const PS_COLORS = ['#3d6e4d','#29513a','#5a8266','#7b9464'];
 
   const psToast = document.getElementById('ps-toast');
   const psAvaTxt = document.getElementById('ps-ava-txt');
