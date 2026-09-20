@@ -81,7 +81,7 @@
   body.has-cursor a,body.has-cursor button,body.has-cursor .book{cursor:none}
   body.has-cursor .cursor-dot,body.has-cursor .cursor-ring{opacity:1}
 
-  /* ---------- nav (clara sobre a foto; escura ao rolar) ---------- */
+  /* ---------- nav ---------- */
   @keyframes navDown{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
   nav{
     position:fixed;top:0;left:0;right:0;z-index:200;
@@ -113,7 +113,7 @@
   nav.scrolled .nav-cta{border-color:var(--clay-soft);color:var(--clay-deep)}
   nav.scrolled .nav-cta:hover{background:var(--clay);color:#fbf6ea;border-color:var(--clay)}
 
-  /* ---------- hero (foto de fundo, estrutura blindada) ---------- */
+  /* ---------- hero (foto de fundo) ---------- */
   .hero{
     position:relative;
     display:flex;
@@ -238,6 +238,27 @@
   .mq-track .ic{width:13px;height:13px;color:var(--clay-soft);flex-shrink:0}
   @keyframes mq{to{transform:translateX(-50%)}}
 
+  /* ---------- fórmula da expansão (texto da Tainá) ---------- */
+  .formula-sec{text-align:center}
+  .formula-sec .label{justify-content:center}
+  .formula-sec h2{text-align:center;margin-bottom:clamp(40px,5vw,60px)}
+  .formula-step{max-width:640px;margin:0 auto;padding:26px 28px}
+  .formula-step h3{font:400 clamp(1.3rem,2.8vw,1.9rem)/1.25 var(--serif);color:var(--ink)}
+  .formula-step p{font-size:15.5px;color:var(--muted);margin-top:10px}
+  .formula-plus{
+    display:flex;align-items:center;justify-content:center;gap:16px;
+    margin:8px 0;
+  }
+  .formula-plus .ic{width:14px;height:14px;color:var(--clay-soft)}
+  .formula-plus b{font:italic 300 clamp(2rem,4vw,3rem)/1 var(--serif);color:var(--clay)}
+  .formula-result{
+    margin:clamp(44px,6vw,64px) auto 0;
+    max-width:640px;padding:40px 28px 34px;
+    border-block:2px solid var(--clay-soft);
+  }
+  .formula-result p{font:340 clamp(1.6rem,3.6vw,2.4rem)/1.2 var(--serif);color:var(--clay-deep)}
+  .formula-result span{display:block;margin-top:12px;font:italic 400 16px/1.5 var(--serif);color:var(--muted)}
+
   /* ---------- estrutura de seção ---------- */
   .wrap{max-width:1140px;margin:0 auto;padding:0 clamp(22px,5vw,40px)}
   .sec{position:relative;padding:clamp(90px,11vw,150px) 0}
@@ -252,7 +273,7 @@
   .lede{color:var(--muted);font-size:clamp(16px,1.7vw,19px);max-width:660px}
   .lede strong{color:var(--ink);font-weight:500}
 
-  /* ---------- reveals (só escondem se o JS estiver funcionando) ---------- */
+  /* ---------- reveals ---------- */
   .rv-ready [data-rv]{opacity:0;transform:translateY(34px);transition:opacity .95s var(--ez),transform .95s var(--ez);transition-delay:var(--d,0s)}
   .rv-ready [data-rv="left"]{transform:translateX(-44px)}
   .rv-ready [data-rv="right"]{transform:translateX(44px)}
@@ -541,17 +562,43 @@
   .invest .label::before{background:rgba(163,201,171,.45)}
   .invest h2{color:var(--cream)}
   .invest h2 em{color:#a3c9ab}
-  .invest-lede{color:var(--on-dark-muted);max-width:640px}
-  .anchor-price{
-    display:inline-block;margin-top:26px;
-    font:400 clamp(1.3rem,2.4vw,1.8rem)/1 var(--serif);color:#7f9280;
-    text-decoration:line-through;text-decoration-color:rgba(163,201,171,.55);text-decoration-thickness:2px;
+  .invest-lede{color:var(--on-dark-muted);max-width:680px;font-size:clamp(15.5px,1.7vw,18px)}
+
+  /* ticket rasgado (cupom) */
+  .ticket{
+    display:inline-block;position:relative;
+    margin-top:30px;
+    padding:20px 38px 18px;
+    background:rgba(238,241,228,.08);
+    border:1px dashed rgba(163,201,171,.5);
+    border-radius:6px;
+    transform:rotate(-2.5deg);
+    font:400 clamp(1.4rem,3vw,2.2rem)/1 var(--serif);
+    color:#8a9884;
+    text-decoration:line-through;
+    text-decoration-color:rgba(163,201,171,.6);
+    text-decoration-thickness:2.5px;
   }
+  .ticket::before,.ticket::after{
+    content:'';position:absolute;
+    width:24px;height:24px;border-radius:50%;
+    background:var(--dark);
+    top:50%;transform:translateY(-50%);
+  }
+  .ticket::before{left:-13px}
+  .ticket::after{right:-13px}
+  .ticket small{
+    position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(2.5deg);
+    background:var(--dark);padding:2px 10px;
+    font:600 9px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+    color:#a3c9ab;white-space:nowrap;
+  }
+
   .price-row{display:flex;align-items:center;gap:clamp(24px,4vw,50px);margin:clamp(36px,5vw,56px) 0;flex-wrap:wrap}
   .price{display:flex;align-items:baseline;gap:10px}
   .price .cur{font:italic 400 clamp(1.6rem,3vw,2.4rem)/1 var(--serif);color:#a3c9ab}
   .price .val{font:560 clamp(4.6rem,11vw,8.4rem)/1 var(--serif);letter-spacing:-.02em;color:var(--cream)}
-  .price-cond{font:500 15px/1.6 var(--sans);color:var(--on-dark-muted);max-width:220px}
+  .price-cond{font:500 15px/1.6 var(--sans);color:var(--on-dark-muted);max-width:240px}
   .price-cond b{color:#a3c9ab}
   .seal{width:128px;height:128px;color:#a3c9ab;animation:spin 26s linear infinite;flex-shrink:0}
   .seal text{font:600 11px var(--sans);letter-spacing:2.2px;fill:#a3c9ab}
@@ -590,40 +637,6 @@
   .ft-cta .ic{width:14px;height:14px}
   .ft-bottom{border-top:1px solid rgba(238,241,228,.1);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font:400 12px/1.5 var(--sans);color:#7f9280}
 
-  /* ---------- notificações de compra ---------- */
-  .ps-toast{
-    position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:9500;
-    display:flex;align-items:center;gap:12px;
-    width:max-content;max-width:330px;
-    background:var(--paper);border:1px solid var(--clay-soft);border-radius:16px;
-    padding:12px 34px 12px 13px;box-shadow:0 18px 40px rgba(15,26,20,.24);
-    opacity:0;transform:translateY(140%);visibility:hidden;
-    transition:transform .65s var(--ez),opacity .5s ease,visibility 0s linear .65s;
-  }
-  .ps-toast.show{opacity:1;transform:none;visibility:visible;transition:transform .65s var(--ez),opacity .5s ease,visibility 0s}
-  .ps-ava{
-    width:42px;height:42px;border-radius:50%;flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    font:400 15px/1 var(--serif);color:#f6f8ef;background:var(--clay);
-    position:relative;
-  }
-  .ps-badge{
-    position:absolute;right:-3px;bottom:-3px;width:16px;height:16px;border-radius:50%;
-    background:var(--clay);border:2px solid var(--paper);
-    display:flex;align-items:center;justify-content:center;color:#f6f8ef;
-  }
-  .ps-badge .ic{width:8px;height:8px}
-  .ps-txt{display:flex;flex-direction:column;gap:1px;min-width:0}
-  .ps-txt b{font:500 13.5px/1.3 var(--sans);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}
-  .ps-txt>span{font:400 12.5px/1.35 var(--sans);color:var(--muted)}
-  .ps-txt small{font:600 9px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--clay-deep)}
-  .ps-close{
-    position:absolute;top:4px;right:6px;background:none;border:none;cursor:pointer;
-    color:var(--muted);font:400 17px/1 var(--sans);padding:4px 6px;opacity:.65;transition:opacity .3s,color .3s;
-  }
-  .ps-close:hover{opacity:1;color:var(--ink)}
-  .ps-close:focus-visible{outline:2px solid var(--clay);border-radius:6px}
-
   .ic{display:inline-block;vertical-align:middle}
 
   /* ---------- responsivo ---------- */
@@ -641,6 +654,7 @@
     .book{min-height:120px}
     .book-img{height:230px}
     .book-desc{margin-top:22px;opacity:1;transform:none}
+    .formula-step{padding:22px 20px}
   }
   @media (max-width:780px){
     .nav-links{display:none}
@@ -669,13 +683,19 @@
     .day-item::before{display:none}
     .count-cell{min-width:58px}
     .count-num{min-width:60px;padding:11px 6px}
+    .formula-plus b{font-size:1.8rem}
+    .formula-result{padding:32px 20px 28px}
+    .ticket{padding:16px 28px 14px}
   }
   @media (max-width:560px){
-    .ps-toast{left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:calc(100vw - 24px);padding:10px 30px 10px 11px;gap:10px}
-    .ps-ava{width:36px;height:36px}
-    .ps-txt b{font-size:12.5px;white-space:normal;max-width:none}
-    .ps-txt>span{font-size:11.5px}
+    .ps-toast{display:none}
     .hero-cta .btn{padding:15px 24px}
+    .hero-cta{flex-direction:column;align-items:stretch;width:100%;max-width:340px}
+    .formula-step h3{font-size:1.2rem}
+    .formula-step p{font-size:14.5px}
+    .formula-result p{font-size:1.35rem}
+    .price-row{gap:20px}
+    .ticket{font-size:1.3rem}
   }
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -714,10 +734,10 @@
     <a href="#depoimentos">Depoimentos</a>
     <a href="#investimento">Investimento</a>
   </div>
-  <a class="nav-cta js-wa" href="#">Quero participar</a>
+  <a class="nav-cta js-kiwify" href="#">Quero participar</a>
 </nav>
 
-<!-- ===================== HERO (foto de fundo + texto sobreposto) ===================== -->
+<!-- ===================== HERO ===================== -->
 <header class="hero" id="inicio">
   <div class="hero-bg" aria-hidden="true"></div>
 
@@ -741,7 +761,7 @@
         entrando na frequência da realidade que você deseja manifestar.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-solid js-wa" href="#">Quero participar <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-solid js-kiwify" href="#">Quero participar <svg class="ic"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-ghost" href="#jornada">Conhecer a jornada</a>
       </div>
       <div class="count">
@@ -774,6 +794,46 @@
   </div>
 </div>
 
+<!-- ===================== FÓRMULA DA EXPANSÃO (texto da Tainá) ===================== -->
+<section class="sec solid above-sky formula-sec" id="formula">
+  <div class="wrap">
+    <p class="label" data-rv>A fórmula</p>
+    <h2 data-rv style="--d:.08s">A fórmula da <em>expansão</em></h2>
+
+    <div class="formula-step" data-rv>
+      <h3>Quando você se reconecta com sua intuição</h3>
+      <p>criando pequenos rituais diários que te aproximam desse estado interno de presença, consciência e criação</p>
+    </div>
+
+    <div class="formula-plus" data-rv style="--d:.05s" aria-hidden="true">
+      <svg class="ic"><use href="#i-spark"/></svg>
+      <b>+</b>
+      <svg class="ic"><use href="#i-spark"/></svg>
+    </div>
+
+    <div class="formula-step" data-rv style="--d:.1s">
+      <h3>Melhora a qualidade dos seus pensamentos e sentimentos</h3>
+      <p>tomando consciência de seus padrões mentais, reprogramando crenças e liberando emoções reprimidas</p>
+    </div>
+
+    <div class="formula-plus" data-rv style="--d:.15s" aria-hidden="true">
+      <svg class="ic"><use href="#i-spark"/></svg>
+      <b>+</b>
+      <svg class="ic"><use href="#i-spark"/></svg>
+    </div>
+
+    <div class="formula-step" data-rv style="--d:.2s">
+      <h3>Organiza e alinha uma rotina diária</h3>
+      <p>desenvolvendo hábitos e comportamentos que regulam, fortalecem e equilibram seu corpo físico</p>
+    </div>
+
+    <div class="formula-result" data-rv style="--d:.15s">
+      <p>Você encontra a fórmula da expansão</p>
+      <span>é impossível você ser o mesmo depois disso</span>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== 01 A EXPERIÊNCIA ===================== -->
 <section class="sec solid above-sky" id="mentoria">
   <div class="wrap">
@@ -800,7 +860,7 @@
     <div class="stats">
       <div class="stat"><b><span data-count="10">0</span><i> anos</i></b><span>de jornada conduzindo pessoas</span></div>
       <div class="stat"><b><span data-count="8">0</span><i> encontros</i></b><span>semanais, ao vivo</span></div>
-      <div class="stat"><b><span data-count="2">0</span><i> horas</i></b><span>por encontro, de prática</span></div>
+      <div class="stat"><b>1:30<i>–2h</i></b><span>de aula por encontro, em média</span></div>
       <div class="stat"><b><span data-count="60">0</span><i> dias</i></b><span>para transformar a sua frequência</span></div>
     </div>
   </div>
@@ -836,7 +896,7 @@
   </div>
 </section>
 
-<!-- ===================== 03 TAINÁ (foto de apresentação) ===================== -->
+<!-- ===================== 03 TAINÁ ===================== -->
 <section class="sec solid-alt above-sky" id="taina">
   <div class="wrap">
     <div class="ta-grid">
@@ -860,7 +920,7 @@
         <p>
           Conduzo pessoas em jornadas de expansão de consciência <strong>há 10 anos</strong> —
           e sei que, se você escolher viver essa experiência comigo,
-          <strong>você não será o mesmo. Eu garanto.</strong>
+          <strong>você terá em mãos o caminho para mudar sua vida.</strong>
         </p>
         <p>
           Assim como fiz com a minha realidade, e como centenas de pessoas que
@@ -885,7 +945,7 @@
     <div class="chips">
       <span class="chip">Segundas-feiras</span>
       <span class="chip">Ao vivo ou gravado</span>
-      <span class="chip">2h de aula</span>
+      <span class="chip">1:30 a 2h de aula</span>
       <span class="chip">Prática + reprogramação</span>
     </div>
 
@@ -894,19 +954,19 @@
 
       <div class="step"><span class="node">01</span>
         <h3>Identifique a sua frequência</h3>
-        <p>As escalas de frequência e as leis universais, com uma introdução ao Caibalion: a magnitude do universo, bilhões de estrelas e galáxias — e o quanto ainda há para perceber. Nada de verdades absolutas.</p>
+        <p>As escalas de frequência e as leis universais, com uma introdução ao Caibalion: a magnitude do universo, bilhões de estrelas e galáxias — e o quanto ainda há para perceber. Entenda em que nível da escala você está e dê o start na jornada.</p>
       </div>
       <div class="step"><span class="node">02</span>
         <h3>O mapa do automático</h3>
-        <p>Mapeamos juntos os padrões que rodam sozinhos na sua vida: gatilhos, repetições e roteiros que você nem escolheu — mas segue executando todos os dias.</p>
+        <p>Mapearemos juntos os padrões inconscientes que estão conduzindo sua vida até o momento: gatilhos, repetições e roteiros que você herdou — e agora repete sem perceber. Saia do automático e comece a reprogramar o modo de sobrevivência em que seu corpo se encontra.</p>
       </div>
       <div class="step"><span class="node">03</span>
         <h3>Quebre os padrões</h3>
-        <p>Intervenções práticas para interromper os ciclos de dependência, escassez e medo — e instalar respostas novas, conscientes e alinhadas com quem você decide ser.</p>
+        <p>O que é realidade e o que é programação mental inconsciente. Qual padrão você escolhe quebrar. Acesse e libere as emoções que sustentam essa energia, abrindo espaço para o novo. Vamos interromper ciclos de medo, dependência e escassez — e ativar novas sinapses neurais, criando caminhos mais conscientes e alinhados com quem você escolhe ser.</p>
       </div>
       <div class="step"><span class="node">04</span>
         <h3>O passado no corpo</h3>
-        <p>Um encontro com a criança interior: liberar os traumas e dores registrados no corpo, se permitir crescer e assumir o comando da própria história.</p>
+        <p>Um encontro com a sua criança interior e as feridas emocionais. Identifique seu estado emocional predominante. Libere traumas e dores registrados no corpo, se permita crescer e assumir o seu lugar no comando da própria vida.</p>
       </div>
       <div class="step"><span class="node">05</span>
         <h3>Quem você escolhe ser</h3>
@@ -914,11 +974,11 @@
       </div>
       <div class="step"><span class="node">06</span>
         <h3>A realidade desejada</h3>
-        <p>Clareza e direção: definir com precisão a realidade que você quer manifestar — e alinhar corpo, mente e alma a essa frequência.</p>
+        <p>Clareza e direção: definir com precisão a realidade que você quer manifestar. Aprenda a acessar sentimentos e emoções elevadas, ancorando essas frequências em corpo físico + mente + alma.</p>
       </div>
       <div class="step"><span class="node">07</span>
         <h3>Desperte a sua intuição</h3>
-        <p>Reconexão com a sua voz interior: silenciar o ruído da mente acelerada e voltar a confiar na sua própria percepção.</p>
+        <p>Reconexão com a sua voz interior: silenciar o ruído da mente acelerada e voltar a confiar na sua própria percepção. Quem você precisa deixar de ser para acessar o máximo potencial de quem você veio para ser?</p>
       </div>
       <div class="step"><span class="node">08</span>
         <h3>Torne-se a nova versão</h3>
@@ -952,7 +1012,7 @@
         <span class="book-num">Livro ii</span>
         <h3>Quebrando o Hábito de Ser Você Mesmo</h3>
         <p class="book-author">Dr. Joe Dispenza</p>
-        <p class="book-desc">Para mudar a sua vida, você precisa literalmente mudar o seu cérebro e “desorganizar” a sua antiga personalidade. Um guia prático de meditação para reprogramar o subconsciente e criar um novo eu.</p>
+        <p class="book-desc">Para mudar a sua vida, você precisa literalmente mudar o seu cérebro e “reprogramar” a sua antiga personalidade. Um guia prático de meditação para reprogramar o subconsciente e criar um novo eu.</p>
         <svg class="book-ic"><use href="#i-plus"/></svg>
       </article>
       <article class="book">
@@ -977,7 +1037,7 @@
         <div class="check-item"><span class="check-ic"><svg class="ic"><use href="#i-check"/></svg></span>
           <div><b>8 encontros semanais ao vivo</b><span>com Tainá Machado, toda segunda-feira</span></div></div>
         <div class="check-item"><span class="check-ic"><svg class="ic"><use href="#i-check"/></svg></span>
-          <div><b>2h de aula por encontro</b><span>+ exercício prático + reprogramação mental</span></div></div>
+          <div><b>De 1:30 a 2h de aula por encontro</b><span>em média, + exercício prático + reprogramação mental</span></div></div>
         <div class="check-item"><span class="check-ic"><svg class="ic"><use href="#i-check"/></svg></span>
           <div><b>Meditação matinal diária</b><span>10 minutos para começar o dia na frequência certa</span></div></div>
         <div class="check-item"><span class="check-ic"><svg class="ic"><use href="#i-check"/></svg></span>
@@ -993,7 +1053,14 @@
           <b>Apostila completa da jornada</b>
           <span>conteúdo aprofundado, práticas guiadas e exercícios de integração — para acompanhar cada encontro e registrar a sua transformação ao longo dos 60 dias.</span>
         </div>
-        <p class="bonus-note">“Tudo o que trabalharmos juntos, organizado em um material de apoio para você revisar e praticar sempre que quiser.”</p>
+        <div class="bonus-item">
+          <b>Protocolo de alimentação equilibrada</b>
+          <span>com Júlia Cassuriaga — para regular o corpo de dentro para fora</span>
+        </div>
+        <div class="bonus-item">
+          <b>Guia de cuidados energéticos</b>
+          <span>com Karen Neutzling — proteção e higiene da sua energia no dia a dia</span>
+        </div>
       </aside>
     </div>
   </div>
@@ -1162,17 +1229,24 @@
     <p class="label">08 · Investimento</p>
     <h2>A sua <em>oportunidade</em></h2>
     <p class="invest-lede">
-      Por tudo o que você vai receber — 8 encontros ao vivo, práticas diárias,
-      reprogramação mental e os bônus — poderia custar facilmente…
+      Por tudo o que você vai aprender de forma objetiva, prática e super didática —
+      que me levou <strong>10 anos de estudos diários</strong> e mais de
+      <strong>R$ 150 mil em cursos</strong> — e também pelo tanto de conhecimento
+      valioso que você vai acessar, que realmente é capaz de <strong>transformar</strong>
+      sua vida, essa mentoria poderia custar facilmente…
     </p>
-    <span class="anchor-price">R$ 5.000</span>
+
+    <div class="ticket" data-rv style="--d:.22s">
+      <small>preço de tabela</small>
+      R$ 5.000
+    </div>
 
     <div class="price-row">
       <div class="price">
         <span class="cur">R$</span>
         <span class="val">997</span>
       </div>
-      <p class="price-cond"><b>à vista</b> ou <b>12x de R$ 101,99</b> — preço de lançamento da 2ª turma</p>
+      <p class="price-cond"><b>à vista</b> ou <b>12x de R$ 103,11</b> — preço de lançamento da 2ª turma</p>
       <svg class="seal" viewBox="0 0 128 128" aria-hidden="true">
         <defs><path id="seal-c" d="M64,64 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs>
         <text textLength="300" lengthAdjust="spacingAndGlyphs"><textPath href="#seal-c">SEGUNDA TURMA · PREÇO DE LANÇAMENTO · </textPath></text>
@@ -1185,8 +1259,8 @@
       reconectar com a sua intuição — e depois veja por si mesmo a sua transformação.
     </p>
     <div class="invest-cta">
-      <a class="btn btn-dark js-wa" href="#"><svg class="ic"><use href="#i-chat"/></svg> Quero participar</a>
-      <a class="btn btn-line js-wa" href="#">Fale conosco</a>
+      <a class="btn btn-dark js-kiwify" href="#"><svg class="ic"><use href="#i-arrow"/></svg> Quero participar</a>
+      <a class="btn btn-line js-wa" href="#"><svg class="ic"><use href="#i-chat"/></svg> Fale conosco</a>
     </div>
   </div>
 </section>
@@ -1199,7 +1273,7 @@
       Se a primeira turma foi <em>espiritual</em>,<br>a segunda será <em>quântica.</em>
     </h2>
     <p class="mf-sub">
-      Agora é hora de criar estrutura: rotina diária e treinamento de mentalidade —
+      Agora é hora de criar estrutura, rotina diária e fortalecer a mentalidade —
       um treinamento como você nunca viu antes.
     </p>
     <p class="mf-quote">
@@ -1208,7 +1282,7 @@
       Um passo a passo que te leva de uma realidade à outra.”
     </p>
     <div class="hero-cta">
-      <a class="btn btn-solid js-wa" href="#">Quero despertar <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-solid js-kiwify" href="#">Quero despertar <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -1236,20 +1310,6 @@
   </div>
 </footer>
 
-<!-- ===================== NOTIFICAÇÕES DE COMPRA ===================== -->
-<div class="ps-toast" id="ps-toast" role="status" aria-live="polite">
-  <div class="ps-ava">
-    <span id="ps-ava-txt"></span>
-    <span class="ps-badge"><svg class="ic"><use href="#i-check"/></svg></span>
-  </div>
-  <div class="ps-txt">
-    <b id="ps-name"></b>
-    <span id="ps-msg"></span>
-    <small id="ps-time"></small>
-  </div>
-  <button class="ps-close" id="ps-close" aria-label="Fechar notificação">&times;</button>
-</div>
-
 <script>
 (function(){
   'use strict';
@@ -1259,11 +1319,19 @@
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ============================================================
-     WHATSAPP DA TAINÁ — +55 53 8101-9343
+     LINKS — CHECKOUT E WHATSAPP
+     Botões de compra (js-kiwify) → checkout da Kiwify
+     Botões de conversa (js-wa) → WhatsApp da Tainá
   ============================================================ */
-  const WHATS_URL = 'https://wa.me/555381019343?text=' +
-    encodeURIComponent('Oi, Tainá! Quero participar da Mentoria Despertos — turma de outubro.');
+  const KIWIFY_URL = 'https://pay.kiwify.com.br/ikeXR3f';
+  const WHATS_URL  = 'https://wa.me/555381019343?text=' +
+    encodeURIComponent('Oi, Tainá! Quero saber mais sobre a Mentoria Despertos — turma de outubro.');
 
+  document.querySelectorAll('.js-kiwify').forEach(a => {
+    a.href = KIWIFY_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
   document.querySelectorAll('.js-wa').forEach(a => {
     a.href = WHATS_URL;
     a.target = '_blank';
@@ -1619,58 +1687,6 @@
     btn.textContent = 'Parar';
     setPhase(0);
   });
-
-  /* ============================================================
-     NOTIFICAÇÕES DE COMPRA (prova social)
-  ============================================================ */
-  const PS_NAMES = ['Ana Paula','Carlos Eduardo','Juliana','Marcos Vinícius','Fernanda','Rafael','Camila','Bruno','Larissa','Thiago','Patrícia','Diego','Mariana','Felipe','Aline','Gabriel','Vanessa','André','Beatriz','Lucas','Renata','Eduardo','Priscila','Rodrigo','Tatiane','Vitor','Michele','Leonardo','Carla','Gustavo','Débora','Henrique','Simone','Ricardo','Cristiane','Fábio'];
-  const PS_CITIES = ['São Paulo','Rio de Janeiro','Belo Horizonte','Curitiba','Porto Alegre','Salvador','Fortaleza','Recife','Goiânia','Florianópolis','Campinas','Manaus','Vitória','Natal','João Pessoa','Ribeirão Preto','Santos','Blumenau','Belém','Brasília'];
-  const PS_MSGS = ['garantiu a vaga na mentoria','acabou de se inscrever','entrou na Comunidade Despertos','garantiu sua vaga na 2ª turma','entrou para a turma de outubro','acabou de garantir o acesso'];
-  const PS_COLORS = ['#3d6e4d','#29513a','#5a8266','#7b9464'];
-
-  const psToast = document.getElementById('ps-toast');
-  const psAvaTxt = document.getElementById('ps-ava-txt');
-  const psName = document.getElementById('ps-name');
-  const psMsg = document.getElementById('ps-msg');
-  const psTime = document.getElementById('ps-time');
-  const psClose = document.getElementById('ps-close');
-  let psLastIdx = -1, psHideT = null, psPausedUntil = 0;
-
-  function psRand(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
-  function psInitials(n){
-    return n.split(' ').filter(Boolean).slice(0, 2)
-            .map(w => w.charAt(0)).join('').toUpperCase();
-  }
-  function psShow(){
-    if(document.hidden || Date.now() < psPausedUntil) return;
-    let i;
-    do{ i = Math.floor(Math.random() * PS_NAMES.length); } while(i === psLastIdx);
-    psLastIdx = i;
-    const name = PS_NAMES[i];
-    psAvaTxt.textContent = psInitials(name);
-    psAvaTxt.parentElement.style.background = PS_COLORS[i % PS_COLORS.length];
-    psName.textContent = name + ' · ' + psRand(PS_CITIES);
-    psMsg.textContent = psRand(PS_MSGS);
-    psTime.textContent = Math.random() < .18
-      ? 'agora mesmo · verificado'
-      : 'há ' + (1 + Math.floor(Math.random() * 9)) + ' min · verificado';
-    psToast.classList.add('show');
-    clearTimeout(psHideT);
-    psHideT = setTimeout(() => psToast.classList.remove('show'), 6200);
-  }
-  function psSchedule(first){
-    const delay = first ? 5000 : 15000 + Math.random() * 15000;
-    setTimeout(() => { psShow(); psSchedule(false); }, delay);
-  }
-  psClose.addEventListener('click', () => {
-    clearTimeout(psHideT);
-    psToast.classList.remove('show');
-    psPausedUntil = Date.now() + 60000;
-  });
-  document.addEventListener('visibilitychange', () => {
-    if(document.hidden){ clearTimeout(psHideT); psToast.classList.remove('show'); }
-  });
-  psSchedule(true);
 })();
 </script>
 </body>
