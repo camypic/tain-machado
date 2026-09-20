@@ -38,9 +38,7 @@
     --cream:#eef1e4;
     --on-dark-muted:#a6b8a6;
 
-    /* FOTO DE FUNDO DA HERO — o script tenta "fotos/taina-hero.png"
-       e, se não existir, usa o espelho online. Se ambos falharem,
-       a hero cai num verde-floresta elegante (nunca quebra). */
+    /* FOTO DE FUNDO DA HERO */
     --hero-img:url('fotos/taina-hero.png');
 
     --livros-img:url('fotos/livros.png');
@@ -238,7 +236,7 @@
   .mq-track .ic{width:13px;height:13px;color:var(--clay-soft);flex-shrink:0}
   @keyframes mq{to{transform:translateX(-50%)}}
 
-  /* ---------- fórmula da expansão (texto da Tainá) ---------- */
+  /* ---------- fórmula da expansão ---------- */
   .formula-sec{text-align:center}
   .formula-sec .label{justify-content:center}
   .formula-sec h2{text-align:center;margin-bottom:clamp(40px,5vw,60px)}
@@ -564,7 +562,7 @@
   .invest h2 em{color:#a3c9ab}
   .invest-lede{color:var(--on-dark-muted);max-width:680px;font-size:clamp(15.5px,1.7vw,18px)}
 
-  /* ticket rasgado (cupom) */
+  /* ticket rasgado */
   .ticket{
     display:inline-block;position:relative;
     margin-top:30px;
@@ -587,12 +585,6 @@
   }
   .ticket::before{left:-13px}
   .ticket::after{right:-13px}
-  .ticket small{
-    position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(2.5deg);
-    background:var(--dark);padding:2px 10px;
-    font:600 9px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;
-    color:#a3c9ab;white-space:nowrap;
-  }
 
   .price-row{display:flex;align-items:center;gap:clamp(24px,4vw,50px);margin:clamp(36px,5vw,56px) 0;flex-wrap:wrap}
   .price{display:flex;align-items:baseline;gap:10px}
@@ -635,7 +627,17 @@
   .ft-cta{font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(238,241,228,.28);border-radius:999px;padding:12px 22px;display:inline-flex;gap:9px;align-items:center;transition:background .3s,color .3s,border-color .3s}
   .ft-cta:hover{background:var(--clay);border-color:var(--clay);color:#f6f8ef}
   .ft-cta .ic{width:14px;height:14px}
-  .ft-bottom{border-top:1px solid rgba(238,241,228,.1);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font:400 12px/1.5 var(--sans);color:#7f9280}
+  .ft-bottom{border-top:1px solid rgba(238,241,228,.1);padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font:400 12px/1.5 var(--sans);color:#7f9280}
+
+  /* ---------- marca da agência (assinatura no rodapé) ---------- */
+  .brandmark{
+    display:inline-flex;align-items:center;gap:10px;
+    opacity:.45;
+    transition:opacity .4s;
+  }
+  .brandmark:hover{opacity:1}
+  .brandmark img{height:22px;width:auto;display:block;filter:grayscale(.2)}
+  .brandmark span{font:italic 400 12px/1 var(--serif);color:#7f9280}
 
   .ic{display:inline-block;vertical-align:middle}
 
@@ -686,9 +688,9 @@
     .formula-plus b{font-size:1.8rem}
     .formula-result{padding:32px 20px 28px}
     .ticket{padding:16px 28px 14px}
+    .ft-bottom{flex-direction:column;text-align:center;gap:10px}
   }
   @media (max-width:560px){
-    .ps-toast{display:none}
     .hero-cta .btn{padding:15px 24px}
     .hero-cta{flex-direction:column;align-items:stretch;width:100%;max-width:340px}
     .formula-step h3{font-size:1.2rem}
@@ -794,7 +796,7 @@
   </div>
 </div>
 
-<!-- ===================== FÓRMULA DA EXPANSÃO (texto da Tainá) ===================== -->
+<!-- ===================== FÓRMULA DA EXPANSÃO ===================== -->
 <section class="sec solid above-sky formula-sec" id="formula">
   <div class="wrap">
     <p class="label" data-rv>A fórmula</p>
@@ -1184,7 +1186,7 @@
         </article>
 
         <article class="testi-card">
-          <p class="testi-txt">Conheci a Tainá em 2019, quando procurei uma forma de me resgatar. Estava perdida em mim, vivendo diversos acontecimentos com os quais eu não sabia lidar, nem mesmo entender o que estava acontecendo. Eu não me via mais, eu não sabia quem eu era. Tinha me perdido dentro de mim mesma. Ela fez eu me reencontrar e, com isso, descobrir o mundo aí fora que me aguardava e o quanto eu tinha pra conquistar. E hoje estou aqui, vivendo muito mais do que planejamos ou sequer sonhamos. Tainá é um ser de luz inigualável.</p>
+          <p class="testi-txt">Conheci a Tainá em 2019, quando procurei uma forma de me resgatar. Estava perdida em mim, vivendo diversos acontecimentos com os quais eu não sabia lidar, nem mesmo entender o que estava acontecendo. Eu não me via mais, eu não sabia quem eu era. Tinha me perdido dentro de mim mesma. Ela fez eu me reencontrar e, com isso, descobrir o mundo aí fora que me aguardava e o quanto eu tinha pra conquitar. E hoje estou aqui, vivendo muito mais do que planejamos ou sequer sonhamos. Tainá é um ser de luz inigualável.</p>
           <div class="testi-who">
             <span class="testi-ava" data-name="Claudia Gonçalves"></span>
             <div><b>Claudia Gonçalves</b><small>jornada com a Tainá</small></div>
@@ -1237,8 +1239,7 @@
     </p>
 
     <div class="ticket" data-rv style="--d:.22s">
-      <small>preço de tabela</small>
-      R$ 5.000
+      R$ 4.997
     </div>
 
     <div class="price-row">
@@ -1305,7 +1306,7 @@
     </div>
     <div class="ft-bottom">
       <span>© 2025 Comunidade Despertos. Todos os direitos reservados.</span>
-      <span>feito com presença.</span>
+      <span>feito com presença <a class="brandmark" href="#" title="Desenvolvido por YMAC"><img src="fotos/ymac.png" alt="YMAC"></a></span>
     </div>
   </div>
 </footer>
@@ -1320,8 +1321,6 @@
 
   /* ============================================================
      LINKS — CHECKOUT E WHATSAPP
-     Botões de compra (js-kiwify) → checkout da Kiwify
-     Botões de conversa (js-wa) → WhatsApp da Tainá
   ============================================================ */
   const KIWIFY_URL = 'https://pay.kiwify.com.br/ikeXR3f';
   const WHATS_URL  = 'https://wa.me/555381019343?text=' +
